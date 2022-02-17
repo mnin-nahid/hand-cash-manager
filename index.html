@@ -7,33 +7,36 @@
     <title>Money manager - by mnin-nahid</title>
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1 class="text-4xl text-center py-8">Money Manager</h1>
+        <h1 class="text-4xl text-center py-8">Money Manager <img style="display: inline; width: 50px;" src="images/money-bag.png" alt=""></h1>
     </header>
-    <main>
-        <section class="grid grid-cols-2">
-            <div class="">
-                <img src="images/money.jpg" alt="">
+    <main class="mx-8">
+        <section class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+            <div class="mx-4">
+                <img class="object-center" src="images/money.jpg" alt="">
             </div>
-            <div class="">
+            <div class="mx-4 px-16 text-center bg-red-100 rounded-md py-2">
+                <div id="show-error" class="bg-red-500 text-white rounded-md">innerText</div>
                 <!-- income section -->
-                <h3 class="text-2xl">Income</h3>
-                <p>Income: <input type="text" name="" id="income-amount" placeholder="Enter your income"></p>
+                <h3 class="text-xl pb-2">Income</h3>
+                <p>Income :<input type="text" name="" id="income-amount" placeholder="Enter your income" class="w-2/4 px-2 py-1 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" required></p>
                 <!-- Expenses section -->
-                <h3 class="text-2xl">Expenses</h3>
-                <p>Food : <input type="text" name="" id="food-expenses" placeholder="How many amount"></p>
-                <p>Rent : <input type="text" name="" id="rent-expenses" placeholder="How many amount"></p>
-                <p>Clothes : <input type="text" name="" id="clothes-expenses" placeholder="How many amount"></p>
-                <button id="claculate-button">Calculate</button>
+                <h3 class="text-xl py-2">Expenses</h3>
+                <p>Food   : <input type="text" name="" id="food-expenses" placeholder="How many amount" class="w-2/4 px-2 py-1 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" required></p>
+                <p>Rent   : <input type="text" name="" id="rent-expenses" placeholder="How many amount" class="w-2/4 px-2 py-1 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"></p>
+                <p>Clothes : <input type="text" name="" id="clothes-expenses" placeholder="How many amount" class="w-2/4 px-2 py-1 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"></p>
+                <button id="claculate-button" class="px-8 py-1 my-4 text-white button-color rounded-lg">Calculate</button>
                 <!-- Calculation -->
-                <h3 class="text-2xl">Total Expenses : <span id="total-expenses">00</span></h3>
-                <h3 class="text-2xl">Balance : <span id="Balance-after-expenses"></span> </h3>
+                <h3 class="text-xl pt-1">Total Expenses : <span id="total-expenses"></span></h3>
+                <h3 class="text-xl pb-2">Balance : <span id="Balance-after-expenses"></span> </h3>
                 <!-- Final calculation -->
-                <p>Save: <input type="text" name="" id="percent-of-saving"> % <button id="save-button">Save</button></p>
-                <h3 class="text-2xl">Saving Amount: <span id="saving-amount">00</span></h3>
-                <h3 class="text-2xl">Remaining Balance: <span id="remaining-balance">00</span></h3>
+                <p>Save: <input type="text" name="" placeholder="Percent" id="percent-of-saving" class="w-1/4 px-2 py-1 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"> % <button id="save-button" class="px-4 py-1 mt-4 text-white button-color rounded-lg">Save</button></p>
+                <h3 class="text-xl">Saving Amount: <span id="saving-amount"></span></h3>
+                <h3 class="text-xl">Remaining Balance: <span id="remaining-balance"></span></h3>
             </div>
         </section>
     </main>
